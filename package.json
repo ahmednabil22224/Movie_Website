@@ -43,6 +43,5 @@
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1"
-  },
-  "homepage": "https://ahmednabil22224.github.io/Movie_Website"
+  }
 }
