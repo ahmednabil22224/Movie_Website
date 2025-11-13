@@ -3,7 +3,7 @@ import { Movie } from "../components/Movie";
 import Pagination from "../components/Pagination";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllMovies } from "../redux/reducer";
-const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = "8092261de010896c13c23d2f471ef156";
 
 export const AllMovies = ({ searchedWord }) => {
   const [allMovies, setAllMovies] = useState([]);

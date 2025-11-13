@@ -3,11 +3,11 @@
 A responsive movie browser built with **React**, **Redux**, and **Tailwind CSS**, powered by the **TMDb API**.  
 Users can search for movies, browse by popularity, and view detailed information for each movie.
 
---
+---
 
 🚀 Live Demo
 
-👉 https://github.com/ahmednabil22224/Movie-Website
+👉 https://ahmednabil22224.github.io/Movie_Website/
 
 ---
 
@@ -51,12 +51,9 @@ Users can search for movies, browse by popularity, and view detailed information
 
 4. Run locally
    npm start
-   <<<<<<< HEAD
-   =======
+
 5. Open http://localhost:3000
    in your browser.
-
-   > > > > > > > aff9df4 (Update app with new changes)
 
 6. Build for production
    npm run build
