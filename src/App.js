@@ -17,12 +17,10 @@ function App() {
     <div className="App">
       <Header handleSearch={handleSearch} />
 
-      <Router>
-        <Routes>
-          <Route path="/" element={<AllMovies searchedWord={searchedWord} />} />
-          <Route path="/movie/:id" element={<Details />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<AllMovies searchedWord={searchedWord} />} />
+        <Route path="/movie/:id" element={<Details />} />
+      </Routes>
     </div>
   );
 }

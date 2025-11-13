@@ -50,29 +50,32 @@ export const AllMovies = ({ searchedWord }) => {
       {!error && !isLoading && (
         <>
           {moviesCount ? (
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-              {Array.isArray(allMovies) && allMovies.length > 0
-                ? allMovies.map((film) => {
-                    return (
-                      <Movie
-                        key={film.id}
-                        id={film.id}
-                        posterPath={film.poster_path}
-                        originalTitle={film.original_title}
-                        releaseDate={film.release_date}
-                        voteCount={film.vote_count}
-                        voteAverage={film.vote_average}
-                      />
-                    );
-                  })
-                : ""}
-
-              {moviesCount ? (
-                <Pagination handlePageClick={handlePageClick} />
-              ) : (
-                ""
-              )}
-            </div>
+            <>
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                {Array.isArray(allMovies) && allMovies.length > 0
+                  ? allMovies.map((film) => {
+                      return (
+                        <Movie
+                          key={film.id}
+                          id={film.id}
+                          posterPath={film.poster_path}
+                          originalTitle={film.original_title}
+                          releaseDate={film.release_date}
+                          voteCount={film.vote_count}
+                          voteAverage={film.vote_average}
+                        />
+                      );
+                    })
+                  : ""}
+              </div>
+              <div>
+                {moviesCount ? (
+                  <Pagination handlePageClick={handlePageClick} />
+                ) : (
+                  ""
+                )}
+              </div>
+            </>
           ) : (
             <div className="text-center text-5xl mt-20">
               The Film Is Not Exist{" "}
