@@ -3,7 +3,7 @@ import { Movie } from "../components/Movie";
 import Pagination from "../components/Pagination";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllMovies } from "../redux/reducer";
-const apiKey = "8092261de010896c13c23d2f471ef156";
+const apiKey = process.env.REACT_APP_API_KEY;
 
 export const AllMovies = ({ searchedWord }) => {
   const [allMovies, setAllMovies] = useState([]);
@@ -28,7 +28,7 @@ export const AllMovies = ({ searchedWord }) => {
     dispatch(getAllMovies(url));
   }, [dispatch, pageNum, searchedWord]);
 
-  useEffect(() => {
+  useEffect(() => { 
     setAllMovies(data);
   }, [data]);
 
