@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Movie = React.memo((props) => {
   return (
-    <div className="relative rounded overflow-hidden shadow-lg transition duration-500">
+    <div className="relative max-h-96 rounded overflow-hidden shadow-lg transition duration-500">
       <Link to={`/movie/${props.id}`}>
         <img
           loading="lazy"

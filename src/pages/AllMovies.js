@@ -51,7 +51,7 @@ export const AllMovies = ({ searchedWord }) => {
         <>
           {moviesCount ? (
             <>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+              <div className="grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {Array.isArray(allMovies) && allMovies.length > 0
                   ? allMovies.map((film) => {
                       return (
@@ -70,7 +70,7 @@ export const AllMovies = ({ searchedWord }) => {
               </div>
               <div>
                 {moviesCount ? (
-                  <Pagination handlePageClick={handlePageClick} />
+                  <Pagination handlePageClick={handlePageClick} pageNum={pageNum}/>
                 ) : (
                   ""
                 )}

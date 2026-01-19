@@ -1,10 +1,10 @@
-import "./App.css";
 import "./styles/tailwind.css";
 import { Header } from "./components/Header";
 import { AllMovies } from "./pages/AllMovies";
 import { Details } from "./pages/Details";
+import { NotFound } from "./pages/NotFound";
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [searchedWord, setSearchedWord] = useState("");
@@ -20,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AllMovies searchedWord={searchedWord} />} />
         <Route path="/movie/:id" element={<Details />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
-export default function Pagination({ handlePageClick }) {
+export default function Pagination({ handlePageClick, pageNum }) {
   useEffect(() => {
     const paginateUl = document.querySelector('ul[role="navigation"]');
     if (paginateUl) {
@@ -22,6 +22,7 @@ export default function Pagination({ handlePageClick }) {
         marginPagesDisplayed={2}
         nextClassName={"px-2 border-2 border-blue-900 text-blue-900"}
         onPageChange={handlePageClick}
+        forcePage={pageNum}
         pageRangeDisplayed={2}
         pageCount={500}
         previousLabel={"<"}
